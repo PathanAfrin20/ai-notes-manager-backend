@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AI Notes Manager</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="main-content" style="margin: auto; max-width: 500px;">
+
+        <div class="section">
+
+            <h2>Login</h2>
+
+            <input type="email" id="email" placeholder="Enter Email"
+                style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:none;">
+
+            <input type="password" id="password" placeholder="Enter Password"
+                style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:none;">
+
+            <button style="width:100%;" onclick="loginUser()">
+                Login
+            </button>
+
+            <p style="margin-top:15px;">
+                Don't have an account?
+                <a href="/register" style="color:#38bdf8;">
+                    Register
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Notes Manager</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h2>AI Notes</h2>
+
+        <ul>
+            <li>Add Note</li>
+            <li>My Notes</li>
+            <li>Upload PDF</li>
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Topbar -->
+        <div class="topbar">
+            <h1>AI Notes Manager 🚀</h1>
+        </div>
+
+        <!-- Add Note Section -->
+        <div class="section">
+
+            <h2>Add Note</h2>
+
+            <input 
+                type="text"
+                id="note-title"
+                placeholder="Enter note title"
+                style="
+                    width:100%;
+                    padding:15px;
+                    margin-bottom:15px;
+                    border:none;
+                    border-radius:10px;
+                "
+            >
+
+            <textarea 
+                id="note-content"
+                placeholder="Enter note content..."
+            ></textarea>
+
+            <br><br>
+
+            <button onclick="addNote()">
+                Add Note
+            </button>
+
+        </div>
+
+        <!-- Upload PDF Section -->
+        <div class="section">
+
+            <h2>Upload PDF</h2>
+
+            <input type="file" id="pdf-file">
+
+            <button onclick="uploadPDF()">
+                Upload PDF
+            </button>
+
+        </div>
+
+        <!-- Extracted PDF Text -->
+        <div class="section">
+
+            <h2>Extracted PDF Text</h2>
+
+            <textarea
+                id="summary-box"
+                placeholder="Extracted PDF text will appear here..."
+            ></textarea>
+
+        </div>
+
+        <!-- Notes Section -->
+        <div class="section">
+
+            <h2>My Notes</h2>
+
+            <div id="notes-container"></div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <!-- Automatically load notes -->
+    <script>
+        window.onload = fetchNotes;
+    </script>
+
+</body>
+
+</html>
+
