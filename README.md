@@ -1,4 +1,4 @@
-# AI Notes Manager Backend 🚀
+# AI Notes Manager Backend 
 
 A Flask-based backend project for managing notes with JWT authentication, MongoDB integration, PDF upload & extraction, AI tags generation, and smart search functionality.
 
