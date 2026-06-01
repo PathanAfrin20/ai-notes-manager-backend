@@ -15,6 +15,8 @@ A Flask-based backend project for managing notes with JWT authentication, MongoD
 * Smart Search using TF-IDF
 * Frontend Integration using HTML, CSS, JavaScript
 
+This project demonstrates JWT authentication, secure password hashing, MongoDB integration, protected REST APIs, CRUD operations, PDF processing, and AI-powered note management features.
+
 ## Technologies Used
 
 * Python
